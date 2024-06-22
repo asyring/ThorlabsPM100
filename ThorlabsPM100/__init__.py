@@ -1,7 +1,7 @@
 # -*- coding: utf8 -*-
 import sys
 
-__version__ = '1.1.2'
+__version__ = '1.2.2'
 
 __long_description__ = u"""\
 Overview
@@ -63,6 +63,7 @@ Please send bug reports or feedback to `Pierre Cladé`_.
 Vesrion History
 ===============
 
+* 1.2.1 : change 'ask' to 'query'
 * 1.1.1 and 1.1.2 : small bug corrections
 * 1.1 : support of Python 3 with 2to3
 * 1.0 : initial release
@@ -72,5 +73,5 @@ Vesrion History
 """
 
 if "setuptools" not in sys.modules.keys():
-    from ThorlabsPM100 import ThorlabsPM100
-    from usbtmc import USBTMC
+    from .ThorlabsPM100 import ThorlabsPM100
+    from .usbtmc import USBTMC

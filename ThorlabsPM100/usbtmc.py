@@ -17,15 +17,15 @@ class USBTMC(object):
             length = 4000
         return os.read(self.FILE, length)
 
-    def ask(self, command, length=None):
+    def query(self, command, length=None):
         self.write(command)
         return self.read(length=length).decode('ascii')
 
     def ask_for_value(self, command):
-        return eval(self.ask(command).strip())
+        return eval(self.query(command).strip())
 
     def getName(self):
-        return self.ask("*IDN?")
+        return self.query("*IDN?")
 
     def sendReset(self):
         self.write("*RST")
